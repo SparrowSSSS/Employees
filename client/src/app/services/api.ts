@@ -1,9 +1,9 @@
 import { fetchBaseQuery, createApi, retry } from "@reduxjs/toolkit/query/react";
 import { RootState } from "../store";
-import config from "../../config";
+import config from "../../config"; // в репозитории файл конфига отсутсвует, необходимо создать его самостоятельно
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: config.REACT_APP_BASE_URL_API,
+    baseUrl: config.REACT_APP_BASE_URL_API, // базовый url к api из конфига, например: http://localhost:8000/api
     prepareHeaders(headers, { getState }) {
         const token = (getState() as RootState).auth.user?.token || localStorage.getItem("token");
 
