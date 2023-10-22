@@ -24,4 +24,4 @@ yarn-error.log*
 
 # файл конфига
 
-/src/config.ts
+src/config.ts
